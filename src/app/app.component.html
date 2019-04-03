@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>
+    {{month}}.{{day}}.{{year}} To do list:
+  </h1>
+<h2>{{currentFocus}}</h2>
+<ul>
+  <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of tasks">{{currentTask.description}} <button (click)="editTask()">Edit!</button><br><br></li>
+</ul>
+</div>
