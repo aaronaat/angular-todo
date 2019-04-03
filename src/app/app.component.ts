@@ -21,10 +21,15 @@ export class AppComponent {
     new Task(`test to do task ${this.year}`, 2)
   ];
 
-  editTask() {
-    alert(`time to edit task`);
+  selectedTask = null;
+
+  editTask(clickedTask) {
+    this.selectedTask = clickedTask;
   }
 
+  finishedEditing() {
+    this.selectedTask = null;
+  }
 
   priorityColor(currentTask){
     if (currentTask.priority === 3){
